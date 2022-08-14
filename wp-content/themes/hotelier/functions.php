@@ -2,11 +2,13 @@
 
 function hotelier_script_style()
 {
-    wp_register_style('main', get_template_directory_uri().'../css/main.css');
-    wp_register_style('style', get_template_directory_uri().'../css/style.css');
-    wp_register_style('stylesheet', get_template_directory_uri().'../fonts/font-awesome/css/font-awesome.css');
+    wp_register_style('main', get_template_directory_uri().'/css/main.css');
+    wp_register_style('style', get_template_directory_uri().'/css/style.css');
+    wp_register_style('bootstrap', get_template_directory_uri().'/css/bootstrap.min.css');
+    wp_register_style('stylesheet', get_template_directory_uri().'/fonts/font-awesome/css/font-awesome.css');
     wp_enqueue_style('main');
     wp_enqueue_style('style');
+    wp_enqueue_style('bootstrap');
     wp_enqueue_style('stylesheet');
 }
 add_action('wp_enqueue_scripts', 'hotelier_script_style');
@@ -150,3 +152,6 @@ function create_posttype()
             echo '</div>';
         }
     }
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page();
+}
