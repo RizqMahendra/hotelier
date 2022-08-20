@@ -31,7 +31,9 @@
             'walker' => new WP_Bootstrap_Navwalker(),
         ]);
         ?>
-    
+    <!-- <div class="navbar-right" role="login">
+					<a href="" class="btn btn-warning navbar-btn">Sign in</a>
+				</div> -->
   </div>
 </nav>
 </header>
