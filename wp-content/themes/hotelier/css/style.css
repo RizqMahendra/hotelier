@@ -191,13 +191,13 @@ sup {
 }
 
 a {
-	color: #636569;
+	color: #005500;
 	text-decoration: none;
 	background-color: transparent
 }
 
 a:hover {
-	color: #3e3f42;
+	color: #043504;
 	text-decoration: underline
 }
 
@@ -4462,7 +4462,9 @@ input[type=submit].btn-block {
 
 .navbar {
 	position: relative;
-	padding: .5rem 1rem
+	padding: .5rem 1rem;
+	padding-top:1rem;
+	padding-bottom:1rem;
 }
 
 .navbar,
@@ -14616,12 +14618,12 @@ a.pswp__share--download:hover {
 }
 
 .no-webp .home-property-hero.ubud {
-	background-image: url(../img/a1.webp)
+	background-image: url(../img/a1.svg)
 }
 
 @media (min-width:992px) {
 	.no-webp .home-property-hero.ubud {
-		background-image: url(../img/a1.webp)
+		background-image: url(../img/a1.svg)
 	}
 }
 
@@ -14674,12 +14676,12 @@ a.pswp__share--download:hover {
 }
 
 .no-webp .bg-txt-dark {
-	background-image: url(../img/bg_txt_dark.webp)
+	background-image: url(../img/bg_txt_dark.svg)
 }
 
 @media (min-width:992px) {
 	.no-webp .home-accommodation .nav-row .nav-bg {
-		background-image: url(../img/bg_txt_dark.webp)
+		background-image: url(../img/bg_txt_dark.svg)
 	}
 }
 
@@ -15158,12 +15160,12 @@ a.pswp__share--download:hover {
 }
 
 .home-property-hero.ubud {
-	background-image: url(../img/a1.webp)
+	background-image: url(../img/a1.svg)
 }
 
 @media (min-width:992px) {
 	.home-property-hero.ubud {
-		background-image: url(../img/a1.webp)
+		background-image: url(../img/a1.svg)
 	}
 }
 
@@ -15511,7 +15513,8 @@ a.pswp__share--download:hover {
 .home-property-hero .property-hero-center .introduction {
 	font-family: magicalextralight, Trebuchet MS, Helvetica, sans-serif;
 	color: #fff;
-	width: 100%
+	width: 100%;
+	text-shadow: 1px 1px 8px #000;
 }
 
 .home-property-hero .property-hero-center .introduction .upper-logo {
@@ -15522,27 +15525,27 @@ a.pswp__share--download:hover {
 @media (min-width:768px) {
 	.home-property-hero .property-hero-center .introduction .upper-logo {
 		width: 43px;
-		height: 17px
+		height: 43px
 	}
 }
 
 @media (min-width:992px) {
 	.home-property-hero .property-hero-center .introduction .upper-logo {
 		width: 55px;
-		height: 22px
+		height: 55px
 	}
 }
 
 @media (min-width:1200px) {
 	.home-property-hero .property-hero-center .introduction .upper-logo {
 		width: 66px;
-		height: 26px
+		height: 66px
 	}
 }
 
 .home-property-hero .property-hero-center .introduction .lower-logo {
 	width: 73px;
-	height: 33px
+	height: 74px
 }
 
 @media (min-width:768px) {
@@ -15770,13 +15773,36 @@ a.pswp__share--download:hover {
 
 .home-quickbook {
 	margin-bottom: 20px;
-	display: none
+	display: none;
+	position:relative;
+	text-align:center;
+
 }
 
 @media (min-width:992px) {
 	.home-quickbook {
-		display: block
+		display: block;
+		margin-top: -25px;
 	}
+}
+
+.home-quickbook .button.quickbook{
+	color: #636569;
+    background: #fce200;
+    height: 58px;
+    width: 186px;
+    text-align: center;
+    display: block;
+    font-family: magicalregular,Trebuchet MS,Helvetica,sans-serif;
+    font-size: 15px;
+    line-height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+	border-radius: 5px;
+    transition: background-color .5s ease,color .5s ease,border .5s ease;
+    letter-spacing: 1px;
+    outline: 0;
+	margin: 0 auto;
 }
 
 .home-quickbook .quickbook-row {
@@ -15958,7 +15984,7 @@ a.pswp__share--download:hover {
 }
 
 .home-intro h1 {
-	color: #636569;
+	color: #005500;
 	margin-bottom: 20px
 }
 
@@ -16109,7 +16135,7 @@ a.pswp__share--download:hover {
 	.home-accommodation .nav-row .nav-bg {
 		width: calc(100% - 140px);
 		height: 100%;
-		background-image: url(../img/bg_txt_dark.webp)
+		background-image: url(../img/bg_txt_dark.svg)
 	}
 }
 
@@ -16219,7 +16245,7 @@ a.pswp__share--download:hover {
 .home-accommodation .slider-row .accommodation-swiper-button-next {
 	left: -50%;
 	right: auto;
-	color: #fff
+	color: #636569
 }
 
 .home-accommodation .slider-row .accommodation-swiper-button-next.mobile-button {
@@ -25786,7 +25812,7 @@ a.pswp__share--download:hover {
 }
 
 .bg-txt-dark {
-	background-image: url(../img/bg_txt_dark.webp);
+	background-image: url(../img/bg_txt_dark.svg);
 	background-size: cover;
 	background-position: 50%;
 	background-repeat: no-repeat

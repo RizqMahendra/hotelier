@@ -7,7 +7,7 @@
             the_content();
         endwhile;
     else :
-        echo __('Sorry, nothing to display.', 'udigital');
+        echo __('Sorry, nothing to display.', 'hotelier');
     endif;
     ?>
 </main>
