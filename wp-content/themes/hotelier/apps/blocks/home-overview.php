@@ -35,7 +35,7 @@ function home_overview_callback($block)
                         <picture>
                           <source srcset="<?php echo $image; ?>" type="image/webp">
                           <source srcset="<?php echo $image; ?>" type="image/jpeg"> 
-                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="234">
+                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="193">
                         </picture>
                         <span><?php echo $title; ?></span>
                       </a>
@@ -52,7 +52,7 @@ function home_overview_callback($block)
                         <picture>
                         <source srcset="<?php echo $image; ?>" type="image/webp">
                           <source srcset="<?php echo $image; ?>" type="image/jpeg"> 
-                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="234">
+                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="193">
                         </picture>
                         <span><?php echo $title; ?></span>
                       </a>
@@ -69,7 +69,7 @@ function home_overview_callback($block)
                       <picture>
                         <source srcset="<?php echo $image; ?>" type="image/webp">
                           <source srcset="<?php echo $image; ?>" type="image/jpeg"> 
-                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="234">
+                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="193">
                         </picture>
                         <span><?php echo $title; ?></span>
                       </a>
@@ -87,7 +87,7 @@ function home_overview_callback($block)
                       <picture>
                         <source srcset="<?php echo $image; ?>" type="image/webp">
                           <source srcset="<?php echo $image; ?>" type="image/jpeg"> 
-                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="234">
+                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="193">
                         </picture>
                         <span><?php echo $title; ?></span>
                       </a>
@@ -104,7 +104,7 @@ function home_overview_callback($block)
                       <picture>
                         <source srcset="<?php echo $image; ?>" type="image/webp">
                           <source srcset="<?php echo $image; ?>" type="image/jpeg"> 
-                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="234">
+                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="193">
                         </picture>
                         <span><?php echo $title; ?></span>
                       </a>
@@ -121,7 +121,7 @@ function home_overview_callback($block)
                     <picture>
                         <source srcset="<?php echo $image; ?>" type="image/webp">
                           <source srcset="<?php echo $image; ?>" type="image/jpeg"> 
-                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="234">
+                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="193">
                         </picture>
                         <span><?php echo $title; ?></span>
                       </a>
@@ -138,7 +138,7 @@ function home_overview_callback($block)
                       <picture>
                         <source srcset="<?php echo $image; ?>" type="image/webp">
                           <source srcset="<?php echo $image; ?>" type="image/jpeg"> 
-                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="234">
+                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="193">
                         </picture>
                         <span><?php echo $title; ?></span>
                       </a>
@@ -155,7 +155,7 @@ function home_overview_callback($block)
                       <picture>
                         <source srcset="<?php echo $image; ?>" type="image/webp">
                           <source srcset="<?php echo $image; ?>" type="image/jpeg"> 
-                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="234">
+                          <img src="<?php echo $image; ?>" loading="lazy" alt="<?php echo $title; ?>" width="203" height="193">
                         </picture>
                         <span><?php echo $title; ?></span>
                       </a>

@@ -33,9 +33,9 @@ function wellness_spa_callback($block)
                 <?php if (have_rows('welness')):?>
                 <?php while (have_rows('welness')): the_row();
     $subtitle_spa = get_sub_field('subtitle_spa');
-    $link_spa = get_sub_field('subtitle_spa');
-    $image_spa = get_sub_field('subtitle_spa'); ?>
-                    <div class="navigation-card spa lazyloaded">
+    $link_spa = get_sub_field('link_spa');
+    $image_spa = get_sub_field('image_spa'); ?>
+                    <div class="navigation-card spa lazyloaded" data-src="<?php echo $image_spa; ?>" style="background-image: url(<?php echo $image_spa; ?>);">
                         <a href="<?php echo $link_spa; ?>">                          
                             <div class="subtitle"><h5><?php echo $subtitle_spa; ?></h5></div>
                         </a>
@@ -59,11 +59,14 @@ function wellness_spa_callback($block)
     $subtitle_yoga = get_sub_field('subtitle_yoga');
     $image_yoga = get_sub_field('image_yoga');
     $link_yoga = get_sub_field('link_yoga'); ?>
-                    <div class="navigation-card lazybg lazyloaded" data-src="<?php echo $image_yoga; ?>" style="background-image: url(<?php echo $image_yoga; ?>);">
-                        <a href="<?php echo $link_yoga; ?>">
-                            <div class="subtitle"><h5><?php echo $subtitle_yoga; ?></h5></div>
-                        </a>
-                    </div>
+                    <?php if(!is_null($subtitle_yoga) && $subtitle_yoga != ''):?>
+                        <div class="navigation-card lazybg lazyloaded" data-src="<?php echo $image_yoga; ?>" style="background-image: url(<?php echo $image_yoga; ?>);">
+                            <a href="<?php echo $link_yoga; ?>">
+                                <div class="subtitle"><h5><?php echo $subtitle_yoga; ?></h5></div>
+                            </a>
+                        </div>
+                    <?php endif;?>
+                   
                     <?php endwhile; ?>
                     <?php endif; ?>
                 </div>

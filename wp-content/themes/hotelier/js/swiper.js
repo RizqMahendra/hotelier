@@ -24,7 +24,7 @@ const swiper = new Swiper('.explore-more-slider-container', {
     // },
   });
 
-  const swiper = new Swiper('.review-slider-container', {
+  const swiper1 = new Swiper('.review-slider-container', {
     // Optional parameters
     // direction: 'horizontal',
     slidesPerView: 4,

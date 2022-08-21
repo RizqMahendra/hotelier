@@ -38,7 +38,7 @@ function col_image_content_callback($block)
                 </div>
             </div>
             <div class="col-12 col-md-6 order-1 order-md-2 events-bg wedding lazyloaded">
-                <a href="<?php echo $url; ?>" style="width:100%;height:100%;display:block;">Wedding at Maya</a> Wedding and events at Maya Ubud Bali, Indonesia
+                <a href="<?php echo $url; ?>" style="width:100%;height:100%;display:block;">Ubud, The Town of Love</a>
             </div>
             <?php endwhile; ?>
         <?php endif; ?>
@@ -60,7 +60,7 @@ function col_image_content_callback($block)
                 </div>
             </div>
             <div class="col-12 col-md-6 order-1 order-md-1 events-bg meeting lazyloaded">
-                <a href="<?php echo $url; ?>" title="Explore Meetings &amp; Events at Maya" style="width:100%;height:100%;display:block;">Meeting at Maya</a>                Meet at Maya Ubud Bali, Indonesia
+                <a href="<?php echo $url; ?>" title="Explore Meetings &amp; Events at Maya" style="width:100%;height:100%;display:block;">Donna, New Clubbing Experience in Ubud</a> 
             </div>
 <?php endwhile; ?>
 <?php endif; ?>

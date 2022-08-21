@@ -24,11 +24,8 @@ function home_hero_callback($block)
     $tagline = get_field('tagline');
     $logo = get_field('logo', 'options'); ?>
 
-<<<<<<< HEAD
-<section class="home-property-hero ubud parallax-bg" style="background-position: center 0px;">
-=======
+
 <section class="home-property-hero ubud parallax-bg" style="background-position: bottom center;">
->>>>>>> a09adb3e91baa17d953b2ed1e549d7c6e745b69d
     <div class="container-fluid">
         <div class="row">
             <div class="d-none d-lg-block col-lg-1 ribbon-container">

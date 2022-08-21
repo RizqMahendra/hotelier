@@ -70,7 +70,7 @@ function home_accomodation_callback($block)
                                 $image = get_sub_field('image');
                             ?>
                             <div class="swiper-slide" data-title="<?php echo $title?>" data-index="<?php echo $i;?>" data-swiper-slide-index="<?php  echo $i;?>" role="group" aria-label="1 / 8" style="width: 760px;">
-                                <div class="row align-items-center justify-content-center">
+                                <div class="row align-items-center justify-content-center slide-wrapper">
                                     <div class="col-12 col-lg-5">
                                         <div class="caption-wrapper">
                                             <?php echo $content;?>

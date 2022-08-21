@@ -27,14 +27,10 @@ function page_intro_callback($block)
     <div class="container-fluid">
         <div class="row page-intro-bg-row">
             <div class="col-12 p-0 page-intro-bg-col">
-                <div class="bg-container parallax-bg" style="background-image: url('<?php echo $background; ?>'); background-position: center 0px;"></div>
+                <div class="bg-container parallax-bg" style="background-image: url('<?php echo $background; ?>'); background-position: center center;"></div>
             </div>
         </div>
-        <div class="row page-breadcrumb-row">
-            <div class="  col-10 offset-1 col-lg-8 offset-lg-2 p-0 page-breadcrumb-col">
-                <?php the_breadcrumb(); ?>
-            </div>
-        </div>
+        
         <div class="row page-heading-row">
             <div class="col-10 offset-1 col-lg-4 offset-lg-2 p-0 page-heading-col">
                 <h2><?php echo $title; ?></h2>

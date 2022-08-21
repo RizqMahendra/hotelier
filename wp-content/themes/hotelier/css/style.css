@@ -191,11 +191,7 @@ sup {
 }
 
 a {
-<<<<<<< HEAD
-	color: #005500 !important;
-=======
 	color: #005500;
->>>>>>> a09adb3e91baa17d953b2ed1e549d7c6e745b69d
 	text-decoration: none;
 	background-color: transparent
 }
@@ -13763,7 +13759,7 @@ section .lazyloaded {
 
 .hotelinfomodal .modal-dialog .modal-content .modal-header h4 img {
 	width: 47px;
-	height: 20px
+	height: 47px
 }
 
 .hotelinfomodal .modal-dialog .modal-content .modal-body {
@@ -15523,7 +15519,7 @@ a.pswp__share--download:hover {
 
 .home-property-hero .property-hero-center .introduction .upper-logo {
 	width: 36px;
-	height: 13px
+	height: 36px
 }
 
 @media (min-width:768px) {
@@ -16079,7 +16075,11 @@ a.pswp__share--download:hover {
 	height: auto;
 	transition: transform .4s ease-in-out
 }
-
+@media (min-width:992px){
+	.home-overview .overview-container-col .navigation-card a img {
+		max-height:193px;
+	}
+}
 .home-overview .overview-container-col .navigation-card a span {
 	font-family: magicalextralight, Trebuchet MS, Helvetica, sans-serif;
 	font-size: 18px;
@@ -16509,6 +16509,12 @@ a.pswp__share--download:hover {
 	margin: 15px 0
 }
 
+@media (max-width:991px){
+	.home-accommodation .slider-row .accommodation-slider-col .accommodation-slider-container .slide-wrapper {
+		padding:0 30px;
+	}
+}
+
 .home-accommodation .slider-row .accommodation-slider-col .accommodation-slider-container .swiper-wrapper .swiper-slide img {
 	width: 100%;
 	height: auto
@@ -16684,7 +16690,7 @@ a.pswp__share--download:hover {
 	align-items: center
 }
 
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper {
+.home-restaurants .slider-row .caption-wrapper {
 	width: 83.33333%;
 	margin: 0 auto;
 	position: relative;
@@ -16718,20 +16724,20 @@ a.pswp__share--download:hover {
 	}
 }
 
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper p {
+.home-restaurants .slider-row .caption-wrapper p {
 	-webkit-animation: textFadeIn 1.5s ease;
 	animation: textFadeIn 1.5s ease;
 	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards
 }
 
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .type {
+.home-restaurants .slider-row  .caption-wrapper .type {
 	font-size: 14px;
 	line-height: 16px;
 	margin-bottom: 6px
 }
 
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .title {
+.home-restaurants .slider-row  .caption-wrapper .title {
 	font-size: 24px;
 	line-height: 26px;
 	font-weight: 700;
@@ -16746,14 +16752,14 @@ a.pswp__share--download:hover {
 	color: #fff
 }
 
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .title:active,
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .title:focus,
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .title:hover {
+.home-restaurants .slider-row  .caption-wrapper .title:active,
+.home-restaurants .slider-row  .caption-wrapper .title:focus,
+.home-restaurants .slider-row .caption-wrapper .title:hover {
 	text-shadow: 0 0 1px #fff
 }
 
 @media (min-width:992px) {
-	.home-restaurants .slider-row .restaurants-caption .caption-wrapper .title {
+	.home-restaurants .slider-row  .caption-wrapper .title {
 		font-size: 28px;
 		line-height: 30px;
 		margin-bottom: 20px
@@ -16761,21 +16767,21 @@ a.pswp__share--download:hover {
 }
 
 @media (min-width:1200px) {
-	.home-restaurants .slider-row .restaurants-caption .caption-wrapper .title {
+	.home-restaurants .slider-row  .caption-wrapper .title {
 		font-size: 30px;
 		line-height: 32px
 	}
 }
 
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .description {
+.home-restaurants .slider-row  .caption-wrapper .description {
 	margin-bottom: 15px
 }
 
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .hours {
+.home-restaurants .slider-row  .caption-wrapper .hours {
 	margin-bottom: 2px
 }
 
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .cta-link {
+.home-restaurants .slider-row  .caption-wrapper .hlink {
 	font-family: magicalextralight, Trebuchet MS, Helvetica, sans-serif;
 	font-size: 16px;
 	font-weight: 700;
@@ -16791,9 +16797,9 @@ a.pswp__share--download:hover {
 	animation-fill-mode: forwards
 }
 
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .cta-link:active,
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .cta-link:focus,
-.home-restaurants .slider-row .restaurants-caption .caption-wrapper .cta-link:hover {
+.home-restaurants .slider-row .caption-wrapper .hlink:active,
+.home-restaurants .slider-row  .caption-wrapper .hlink:focus,
+.home-restaurants .slider-row  .caption-wrapper .hlink:hover {
 	text-decoration: none
 }
 
@@ -16806,7 +16812,20 @@ a.pswp__share--download:hover {
 	width: 100%;
 	margin: 15px 0
 }
+@media (max-width:991px){
+	.home-restaurants .slider-row .restaurants-slider-col .restaurants-slider-container {
+		max-height: 380px;
+	}
 
+	.home-restaurants .slider-row .restaurants-slider-col .restaurants-slider-container .slide-wrapper{
+		padding:0 30px;
+	}
+}
+@media (min-width:992px){
+	.home-restaurants .slider-row .restaurants-slider-col .restaurants-slider-container {
+		max-height:400px;
+	}
+}
 .home-restaurants .slider-row .restaurants-slider-col .restaurants-slider-container .swiper-wrapper .swiper-slide img {
 	width: 100%;
 	height: auto
@@ -16864,15 +16883,21 @@ a.pswp__share--download:hover {
 	transition: box-shadow .3s ease-in-out
 }
 
+@media (max-width:991px) {
+	.home-wellness .navigation-card {
+		min-height: 200px;
+	}
+}
+
 @media (min-width:768px) {
 	.home-wellness .navigation-card {
-		width: calc(33.33333% - 10px)
+		width: calc(50% - 10px)
 	}
 }
 
 @media (min-width:1200px) {
 	.home-wellness .navigation-card {
-		width: calc(33.33333% - 12px)
+		width: calc(50%  - 12px)
 	}
 }
 
@@ -17503,7 +17528,7 @@ a.pswp__share--download:hover {
 }
 
 .home-events .events-bg.meeting {
-	background-image: url(../img/mur-events-meeting.webp)
+	background-image: url(../img/donna.jpg)
 }
 
 .home-events .events-bg.meeting.lazy {
@@ -17512,7 +17537,7 @@ a.pswp__share--download:hover {
 }
 
 .home-events .events-bg.wedding {
-	background-image: url(../img/mur-events-wedding.webp)
+	background-image: url(../img/ubud.jpg)
 }
 
 .home-events .events-bg.wedding.lazy {
@@ -25442,8 +25467,25 @@ a.pswp__share--download:hover {
 @media (min-width:992px) {
 	.property-footer .contacts-collection .newsletter-signup p {
 		width: 87.5%;
-		margin-bottom: 65px
+		margin-bottom: 20px
 	}
+}
+.property-footer .contacts-collection .button{
+	color: #636569;
+    background: #fce200;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    display: block;
+    font-family: magicalregular,Trebuchet MS,Helvetica,sans-serif;
+    font-size: 15px;
+    line-height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: background-color .5s ease,color .5s ease,border .5s ease;
+    letter-spacing: 1px;
+    outline: 0;
 }
 
 .property-footer .contacts-collection .newsletter-signup form {
