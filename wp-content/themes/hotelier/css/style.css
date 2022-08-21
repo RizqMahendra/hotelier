@@ -16154,7 +16154,7 @@ a.pswp__share--download:hover {
 }
 
 .home-accommodation .nav-row .nav-col .accommodation-pagination .swiper-pagination-bullet {
-	width: 50%;
+	width: 47%;
 	height: 27px;
 	font-family: magicalextralight, Trebuchet MS, Helvetica, sans-serif;
 	font-size: 15px;
@@ -16243,7 +16243,7 @@ a.pswp__share--download:hover {
 }
 
 .home-accommodation .slider-row .accommodation-swiper-button-next {
-	left: -50%;
+	left: 50%;
 	right: auto;
 	color: #636569
 }
@@ -16298,7 +16298,7 @@ a.pswp__share--download:hover {
 	}
 }
 
-.home-accommodation .slider-row .accommodation-caption .caption-wrapper .title {
+.home-accommodation .slider-row .caption-wrapper .title {
 	font-family: magicalextralight, Trebuchet MS, Helvetica, sans-serif;
 	font-size: 24px;
 	line-height: 26px;
@@ -16314,21 +16314,21 @@ a.pswp__share--download:hover {
 	transition: .3s
 }
 
-.home-accommodation .slider-row .accommodation-caption .caption-wrapper .title:active,
-.home-accommodation .slider-row .accommodation-caption .caption-wrapper .title:focus,
-.home-accommodation .slider-row .accommodation-caption .caption-wrapper .title:hover {
+.home-accommodation .slider-row .caption-wrapper .title:active,
+.home-accommodation .slider-row .caption-wrapper .title:focus,
+.home-accommodation .slider-row .caption-wrapper .title:hover {
 	color: #474747;
 	text-shadow: 0 0 1px #636569
 }
 
 @media (min-width:576px) {
-	.home-accommodation .slider-row .accommodation-caption .caption-wrapper .title {
+	.home-accommodation .slider-row  .caption-wrapper .title {
 		height: auto
 	}
 }
 
 @media (min-width:992px) {
-	.home-accommodation .slider-row .accommodation-caption .caption-wrapper .title {
+	.home-accommodation .slider-row  .caption-wrapper .title {
 		font-size: 28px;
 		line-height: 30px;
 		padding-right: 10px;
@@ -16337,7 +16337,7 @@ a.pswp__share--download:hover {
 }
 
 @media (min-width:1200px) {
-	.home-accommodation .slider-row .accommodation-caption .caption-wrapper .title {
+	.home-accommodation .slider-row  .caption-wrapper .title {
 		font-size: 30px;
 		line-height: 32px;
 		padding-right: 20px

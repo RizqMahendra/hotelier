@@ -19,6 +19,7 @@ function restaurant_accomodation_init()
 
 function restaurant_accomodation_callback($block)
 {
+    $title = get_field('title'); ?>
     ?>
     <section class="home-restaurants section-padding bg-txt-dark lazyloaded">
     <div class="container-fluid">
@@ -27,12 +28,21 @@ function restaurant_accomodation_callback($block)
             <div class="col-10 col-lg-5 p-0 nav-col offset-1 offset-lg-0">
                 <div class="heading-wrapper">
                     <h3 class="section-heading">
-                      Dining <span>at Maya Ubud</span>
+                     <?php echo $title;?>
                     </h3>
                 </div>
             </div>
             <div class="col-6 col-xl-5 p-0 nav-col d-none d-lg-block">
-                <div class="restaurants-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0">Mayasari</span><span class="swiper-pagination-bullet" tabindex="0">Tree Bar</span><span class="swiper-pagination-bullet" tabindex="0">River Cafe</span><span class="swiper-pagination-bullet" tabindex="0">Rasa Bulan</span><span class="swiper-pagination-bullet" tabindex="0">Romantic Dinner</span><span class="swiper-pagination-bullet" tabindex="0">Cooking Class</span><span class="swiper-pagination-bullet" tabindex="0">Floating Journey</span><span class="swiper-pagination-bullet" tabindex="0">In-Villa Grill</span></div>
+                <div class="restaurants-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                    <?php if( have_rows('accomodations') ):?>
+                        <?php $i=0;while( have_rows('accomodations') ) : the_row();?>
+                            <?php
+                                $title = get_sub_field('title');
+                            ?>
+                            <span class="swiper-pagination-bullet" tabindex="<?php echo $i;?>"><?php echo $title;?></span>
+                        <?php $i++;endwhile;?>
+                    <?php endif;?>
+                </div>
             </div>
         </div>
         <div class="row slider-row">
@@ -42,23 +52,25 @@ function restaurant_accomodation_callback($block)
             <div class="col-12 order-2 col-lg-3 order-lg-3 pl-lg-5 col-xl-2 offset-xl-1 pl-xl-0 p-0 restaurants-caption">
                 <div class="restaurants-swiper-button-next swiper-button-next mobile-button" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-a60010875eb94f78e"></div>
                 <div class="restaurants-swiper-button-prev swiper-button-prev mobile-button" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-a60010875eb94f78e"></div>
-                <div class="caption-wrapper">
-                    <p class="type">All-Day Deliciousness</p>
-                    <a class="title" href="/ubud/restaurant/maya-sari">Mayasari</a>
-                    <p>The morning sun heralds an extensive breakfast buffet and a la carte specialties while during dinner, the venue becomes a stage for themed cultural dinners.</p>
-
-<p>Opening Hours :<br>
-Daily, 7.00 AM&nbsp;- 11.00 AM</p>
-                    <a class="cta-link" href="/ubud/restaurant/maya-sari">Read more</a>
-                </div>
             </div>
             <div class="col-12 col-lg-6 p-0 order-1 order-lg-2 restaurants-slider-col">
                 <div class="swiper-container restaurants-slider-container swiper-container-initialized swiper-container-horizontal">
-                    <div class="swiper-wrapper restaurants-slider-wrapper" id="swiper-wrapper-a60010875eb94f78e" aria-live="polite" style="transition: all 0ms ease 0s; transform: translate3d(-760px, 0px, 0px);"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-title="In-Villa Grill" data-index="7" data-highlights="<p class='type'>Dining Program</p><a class='title' href='/ubud/experience/in-villa-grill' >In-Villa Grill</a><p>Why leave the luxurious seclusion of your villa? Ask for one of our dedicated Chefs to prepare a grilled dinner for you in the privacy of your garden.</p><a class='cta-link' href='/ubud/experience/in-villa-grill'>Read more</a>" data-swiper-slide-index="7" role="group" aria-label="1 / 10" style="width: 760px;">
-                            <img data-src="https://mayaresorts.com/assets/images/ubud/experiences/villa-grill/homepage-slider-thumbnail/20220425-in-villa-grill-hst-1.webp" class="swiper-lazy">
-                            <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                    <div class="swiper-wrapper restaurants-slider-wrapper" id="swiper-wrapper-a60010875eb94f78e" aria-live="polite" style="transition: all 0ms ease 0s; transform: translate3d(-760px, 0px, 0px);">
+                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-title="In-Villa Grill" data-index="7" data-highlights="<p class='type'>Dining Program</p><a class='title' href='/ubud/experience/in-villa-grill' >In-Villa Grill</a><p>Why leave the luxurious seclusion of your villa? Ask for one of our dedicated Chefs to prepare a grilled dinner for you in the privacy of your garden.</p><a class='cta-link' href='/ubud/experience/in-villa-grill'>Read more</a>" data-swiper-slide-index="7" role="group" aria-label="1 / 10" style="width: 760px;">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-12 col-lg-5">
+                                    <div class="caption-wrapper">
+                                        <?php echo $content;?>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-7">
+                                    <img data-src="https://mayaresorts.com/assets/images/ubud/experiences/villa-grill/homepage-slider-thumbnail/20220425-in-villa-grill-hst-1.webp" class="swiper-lazy">
+                                    <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                                </div>
+                            </div>
+                           
                         </div>
-                                                <div class="swiper-slide swiper-slide-active" data-title="Mayasari" data-index="0" data-highlights="<p class='type'>All-Day Deliciousness</p><a class='title' href='/ubud/restaurant/maya-sari' >Mayasari</a><p>The morning sun heralds an extensive breakfast buffet and a la carte specialties while during dinner, the venue becomes a stage for themed cultural dinners.</p>
+                        <div class="swiper-slide swiper-slide-active" data-title="Mayasari" data-index="0" data-highlights="<p class='type'>All-Day Deliciousness</p><a class='title' href='/ubud/restaurant/maya-sari' >Mayasari</a><p>The morning sun heralds an extensive breakfast buffet and a la carte specialties while during dinner, the venue becomes a stage for themed cultural dinners.</p>
 
 <p>Opening Hours :<br />
 Daily, 7.00 AM&nbsp;- 11.00 AM</p>
