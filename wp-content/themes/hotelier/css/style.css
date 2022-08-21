@@ -191,7 +191,11 @@ sup {
 }
 
 a {
+<<<<<<< HEAD
+	color: #005500 !important;
+=======
 	color: #005500;
+>>>>>>> a09adb3e91baa17d953b2ed1e549d7c6e745b69d
 	text-decoration: none;
 	background-color: transparent
 }

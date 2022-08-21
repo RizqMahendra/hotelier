@@ -20,6 +20,8 @@ require_once THEME_BLOCKS_URI.'/home-review.php';
 require_once THEME_BLOCKS_URI.'/social-blocks.php';
 require_once THEME_BLOCKS_URI.'/home-accomodation.php';
 require_once THEME_BLOCKS_URI.'/restaurant-accomodation.php';
+require_once THEME_BLOCKS_URI.'/accomodation_intro.php';
+require_once THEME_BLOCKS_URI.'/accomodation_list.php';
 
 add_filter('block_categories_all', function ($categories, $post) {
     return array_merge(
@@ -73,6 +75,8 @@ function hotelier_allowed_blocks($allowed_blocks, $post)
         'acf/social-blocks',
         'acf/home-accomodation',
         'acf/restaurant-accomodation',
+        'acf/accomodation-intro',
+        'acf/accomodation-list',
     ];
 }
 
