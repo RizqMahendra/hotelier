@@ -52,16 +52,14 @@ function home_accomodation_callback($block)
             <div class="col-2 d-none d-lg-block p-0 order-lg-1">
                 <div class="accommodation-swiper-button-prev swiper-button-prev" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f"></div>
             </div>
-            <div class="col-12 col-lg-3 p-0 accommodation-caption order-2 order-lg-2">
+            <div class="col-12 col-lg-3 d-lg-none d-flex p-0 accommodation-caption order-2 order-lg-2">
                 <div class="accommodation-swiper-button-next swiper-button-next mobile-button" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f">
                 </div>
                 <div class="accommodation-swiper-button-prev swiper-button-prev mobile-button" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f">
                 </div>
-                <div class="caption-wrapper">
-                    <a class='title' href='' >Superior room</a>This 30-sqm room comes with modern amenities such as air conditioning, a personal safe, a flat-screen TV, and an electric kettle. Bathroom has a bath and a shower with free toiletries. Daily mineral water and daily afternoon tea are provided. No extra beds allowed in this room type. Guests receive 10% discount for lunch and dinner at the restaurant.<div class='cta-container'><a class='hlink' href=''>Read more</a></div>
-                </div>
+                
             </div>
-            <div class="col-12 col-lg-6 p-0 order-1 order-lg-3 accommodation-slider-col">
+            <div class="col-12 col-lg-8 p-0 order-1 order-lg-3 accommodation-slider-col">
             <?php if (have_rows('accomodations')):?>
                 <div class="swiper-container accommodation-slider-container swiper-container-initialized swiper-container-horizontal">
                     <div class="swiper-wrapper accommodation-slider-wrapper" id="swiper-wrapper-96b77abe7e4aa00f" aria-live="polite" style="transition: all 0ms ease 0s; transform: translate3d(-2280px, 0px, 0px);">
@@ -72,8 +70,19 @@ function home_accomodation_callback($block)
     $content = get_sub_field('content');
     $url = get_sub_field('url');
     $image = get_sub_field('image'); ?>
-                            <div class="swiper-slide" data-title="<?php echo $title; ?>" data-index="<?php echo $i; ?>" data-highlights="<?php  echo $content; ?>" data-swiper-slide-index="<?php  echo $i; ?>" role="group" aria-label="1 / 8" style="width: 760px;">
-                                <img class="swiper-lazy swiper-lazy-loaded" src="<?php echo $image['url']; ?>">
+                            <div class="swiper-slide" data-title="<?php echo $title; ?>" data-index="<?php echo $i; ?>" data-swiper-slide-index="<?php  echo $i; ?>" role="group" aria-label="1 / 8" style="width: 760px;">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-12 col-lg-5">
+                                        <div class="caption-wrapper">
+                                            <?php echo $content; ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-7">
+                                        <img class="swiper-lazy swiper-lazy-loaded" src="<?php echo $image['url']; ?>">
+                                    </div>
+                                </div>
+                                
+                                
                             </div>
                         <?php ++$i;
     endwhile; ?>
@@ -81,10 +90,11 @@ function home_accomodation_callback($block)
                     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                 </div>
             <?php endif; ?>
+                <div class="col-1 d-none d-lg-block p-0 order-lg-4">
+                    <div class="accommodation-swiper-button-next swiper-button-next" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f"></div>
+                </div>
             </div>
-            <div class="col-1 d-none d-lg-block p-0 order-lg-4">
-                <div class="accommodation-swiper-button-next swiper-button-next" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f"></div>
-            </div>
+            
         </div>
         <div class="row mobile-pagination-row">
             <div class="col-12 d-lg-none">
