@@ -191,7 +191,7 @@ sup {
 }
 
 a {
-	color: #005500;
+	color: #005500 !important;
 	text-decoration: none;
 	background-color: transparent
 }
