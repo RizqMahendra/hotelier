@@ -78,9 +78,9 @@ function home_overview_callback($block)
                     <?php endif; ?>
                     <?php if (have_rows('offer_overview')):?>
                     <?php while (have_rows('offer_overview')): the_row();
-    $title = get_sub_field('title');
-    $image = get_sub_field('image');
-    $url = get_sub_field('url'); ?>
+                      $title = get_sub_field('title');
+                      $image = get_sub_field('image');
+                      $url = get_sub_field('url'); ?>
                     <div class="navigation-card">
                       <a href="<?php echo $url; ?>" class="offers" title="<?php echo $title; ?>">
                       <picture>

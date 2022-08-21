@@ -191,7 +191,11 @@ sup {
 }
 
 a {
+<<<<<<< HEAD
 	color: #005500 !important;
+=======
+	color: #005500;
+>>>>>>> a09adb3e91baa17d953b2ed1e549d7c6e745b69d
 	text-decoration: none;
 	background-color: transparent
 }
@@ -4462,7 +4466,9 @@ input[type=submit].btn-block {
 
 .navbar {
 	position: relative;
-	padding: .5rem 1rem
+	padding: .5rem 1rem;
+	padding-top:1rem;
+	padding-bottom:1rem;
 }
 
 .navbar,
@@ -15771,13 +15777,36 @@ a.pswp__share--download:hover {
 
 .home-quickbook {
 	margin-bottom: 20px;
-	display: none
+	display: none;
+	position:relative;
+	text-align:center;
+
 }
 
 @media (min-width:992px) {
 	.home-quickbook {
-		display: block
+		display: block;
+		margin-top: -25px;
 	}
+}
+
+.home-quickbook .button.quickbook{
+	color: #636569;
+    background: #fce200;
+    height: 58px;
+    width: 186px;
+    text-align: center;
+    display: block;
+    font-family: magicalregular,Trebuchet MS,Helvetica,sans-serif;
+    font-size: 15px;
+    line-height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+	border-radius: 5px;
+    transition: background-color .5s ease,color .5s ease,border .5s ease;
+    letter-spacing: 1px;
+    outline: 0;
+	margin: 0 auto;
 }
 
 .home-quickbook .quickbook-row {
@@ -16220,7 +16249,7 @@ a.pswp__share--download:hover {
 .home-accommodation .slider-row .accommodation-swiper-button-next {
 	left: -50%;
 	right: auto;
-	color: #fff
+	color: #636569
 }
 
 .home-accommodation .slider-row .accommodation-swiper-button-next.mobile-button {
