@@ -36,41 +36,28 @@ function home_accomodation_callback($block)
             ?>
             <div class="col-6 col-xl-5 p-0 nav-col d-none d-lg-block">
                 <div class="accommodation-pagination swiper-pagination-clickable swiper-pagination-bullets">
-                    <?php 
-                    
-                    ?>
-                    <span class="swiper-pagination-bullet" tabindex="0">Impressive Forest Suite</span>
-                    <span class="swiper-pagination-bullet" tabindex="0">Impressive Forest Corner Suite</span>
-                    <span class="swiper-pagination-bullet" tabindex="0">Heavenly Jacuzzi Villa</span>
-                    <span class="swiper-pagination-bullet" tabindex="0">Heavenly Pool Villa</span>
-                    <span class="swiper-pagination-bullet" tabindex="0">Heavenly Two Bedroom Pool Villa</span>
-                    <span class="swiper-pagination-bullet" tabindex="0">Maya Presidential Villa</span></div>
+                    <?php if( have_rows('accomodations') ):?>
+                        <?php $i=0;while( have_rows('accomodations') ) : the_row();?>
+                            <?php
+                                $title = get_sub_field('title');
+                            ?>
+                            <span class="swiper-pagination-bullet" tabindex="<?php echo $i;?>"><?php echo $title;?></span>
+                        <?php $i++;endwhile;?>
+                    <?php endif;?>
+                </div>
             </div>
         </div>
         <div class="row slider-row">
             <div class="col-2 d-none d-lg-block p-0 order-lg-1">
-                <div class="accommodation-swiper-button-prev swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f"></div>
+                <div class="accommodation-swiper-button-prev swiper-button-prev" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f"></div>
             </div>
             <div class="col-12 col-lg-3 p-0 accommodation-caption order-2 order-lg-2">
-                <div class="accommodation-swiper-button-next swiper-button-next mobile-button" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f">
+                <div class="accommodation-swiper-button-next swiper-button-next mobile-button" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f">
                 </div>
-                <div class="accommodation-swiper-button-prev swiper-button-prev mobile-button" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f">
+                <div class="accommodation-swiper-button-prev swiper-button-prev mobile-button" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f">
                 </div>
                 <div class="caption-wrapper">
-                    <a class="title" href="/ubud/accommodation/heavenly-jacuzzi-villa">Heavenly Jacuzzi Villa</a>
-                    <ul class="highlights">
-                        <li class="size">Up to 245 square meters​</li>
-                        <li class="bed">1 King (200x200) / 2 Single (100x200)​</li>
-                        <li class="occupancy">Up to 4 adults​</li>
-                        <li class="whirlpool">Outdoor Whirlpool Tub​</li>
-                        <li class="view">Balinese Garden &amp; Terrace</li>
-                        <li class="">&nbsp;</li>
-                        <li class="">&nbsp;</li>
-                        <li class="">&nbsp;</li>
-                    </ul>
-                    <div class="cta-container">
-                        <a class="hlink" href="/ubud/accommodation/heavenly-jacuzzi-villa">Read more</a>
-                    </div>
+                    <a class='title' href='' >Superior room</a>This 30-sqm room comes with modern amenities such as air conditioning, a personal safe, a flat-screen TV, and an electric kettle. Bathroom has a bath and a shower with free toiletries. Daily mineral water and daily afternoon tea are provided. No extra beds allowed in this room type. Guests receive 10% discount for lunch and dinner at the restaurant.<div class='cta-container'><a class='hlink' href=''>Read more</a></div>
                 </div>
             </div>
             <div class="col-12 col-lg-6 p-0 order-1 order-lg-3 accommodation-slider-col">
