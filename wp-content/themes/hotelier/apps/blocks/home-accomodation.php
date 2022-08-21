@@ -36,14 +36,15 @@ function home_accomodation_callback($block)
             ?>
             <div class="col-6 col-xl-5 p-0 nav-col d-none d-lg-block">
                 <div class="accommodation-pagination swiper-pagination-clickable swiper-pagination-bullets">
-                    <?php if( have_rows('accomodations') ):?>
-                        <?php $i=0;while( have_rows('accomodations') ) : the_row();?>
+                    <?php if (have_rows('accomodations')):?>
+                        <?php $i = 0;
+    while (have_rows('accomodations')) : the_row(); ?>
                             <?php
-                                $title = get_sub_field('title');
-                            ?>
-                            <span class="swiper-pagination-bullet" tabindex="<?php echo $i;?>"><?php echo $title;?></span>
-                        <?php $i++;endwhile;?>
-                    <?php endif;?>
+                                $title = get_sub_field('title'); ?>
+                            <span class="swiper-pagination-bullet" tabindex="<?php echo $i; ?>"><?php echo $title; ?></span>
+                        <?php ++$i;
+    endwhile; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -61,24 +62,25 @@ function home_accomodation_callback($block)
                 </div>
             </div>
             <div class="col-12 col-lg-6 p-0 order-1 order-lg-3 accommodation-slider-col">
-            <?php if( have_rows('accomodations') ):?>
+            <?php if (have_rows('accomodations')):?>
                 <div class="swiper-container accommodation-slider-container swiper-container-initialized swiper-container-horizontal">
                     <div class="swiper-wrapper accommodation-slider-wrapper" id="swiper-wrapper-96b77abe7e4aa00f" aria-live="polite" style="transition: all 0ms ease 0s; transform: translate3d(-2280px, 0px, 0px);">
-                        <?php $i=0;while( have_rows('accomodations') ) : the_row();??
+                        <?php $i = 0;
+    while (have_rows('accomodations')) : the_row(); ?>
                             <?php
                                 $title = get_sub_field('title');
-                                $content = get_sub_field('content');
-                                $url = get_sub_field('url');
-                                $image = get_sub_field('image');
-                            ?>
-                            <div class="swiper-slide" data-title="<?php echo $title?>" data-index="<?php echo $i;?>" data-highlights="<?php  echo $content;?>" data-swiper-slide-index="<?php  echo $i;?>" role="group" aria-label="1 / 8" style="width: 760px;">
-                                <img class="swiper-lazy swiper-lazy-loaded" src="<?php echo $image['url'];?>">
+    $content = get_sub_field('content');
+    $url = get_sub_field('url');
+    $image = get_sub_field('image'); ?>
+                            <div class="swiper-slide" data-title="<?php echo $title; ?>" data-index="<?php echo $i; ?>" data-highlights="<?php  echo $content; ?>" data-swiper-slide-index="<?php  echo $i; ?>" role="group" aria-label="1 / 8" style="width: 760px;">
+                                <img class="swiper-lazy swiper-lazy-loaded" src="<?php echo $image['url']; ?>">
                             </div>
-                        <?php $i++;endwhile;?>
+                        <?php ++$i;
+    endwhile; ?>
                     </div>
                     <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                 </div>
-            <?php endif;?>
+            <?php endif; ?>
             </div>
             <div class="col-1 d-none d-lg-block p-0 order-lg-4">
                 <div class="accommodation-swiper-button-next swiper-button-next" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-96b77abe7e4aa00f"></div>

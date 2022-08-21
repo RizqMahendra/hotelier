@@ -10,7 +10,7 @@ function offer_packages_init()
             'description' => __('Offer Packages Block'),
             'category' => 'hotelier_elements',
             'icon' => 'format-image',
-            'keywords' => ['Room_details', 'image'],
+            'keywords' => ['Offer Packages', 'image'],
             'mode' => 'auto',
             'render_callback' => 'offer_packages_callback',
         ]);

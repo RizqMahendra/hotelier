@@ -30,37 +30,56 @@ function multi_catalogues_callback($block)
             </div>
         </nav>
     </div>
+<?php if (have_rows('item')):?>
+<?php while (have_rows('item')): the_row('item');
+    $choice = get_sub_field('choice');
+    $title = get_sub_field('title');
+    $desc = get_sub_field('desc');
+    $url = get_sub_field('url');
+    $img_desktop = get_sub_field('img_desktop');
+    $img_mobile = get_sub_field('img_mobile'); ?>
 <div class="tab-content" id="nav-tabContent">
-    <div class="catalogue-list tab-pane" id="stay" role="tabpanel"aria-labelledby="stay">
+    <div class="catalogue-list tab-pane" id="<?php echo $choice; ?>" role="tabpanel"aria-labelledby="<?php echo $choice; ?>">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 p-0">
                 <div class="row">
                 <div class="col-12 col-md-10 offset-md-1 col-lg-4 offset-lg-0 catalogue-item" id="catalogue-item-1">
                                 <div class="catalogue-item-content">
-                                    <a class="img-link desktop" href="offer/early-bird">
+                                    <a class="img-link desktop" href="<?php echo $url; ?>">
                                         <picture>
-                                            <source srcset="https://mayaresorts.com/assets/images/offers/list-thumbnail-desktop-webp/iqZGqhXEXMVXodbx8y0aUJgV7_AAyfBW.webp" type="image/webp">
-                                            <source srcset="https://mayaresorts.com/assets/images/offers/list-thumbnail-desktop-jpg/E0AtfQvrifeQEnEXLA2o8P4fjX7uyZLS.jpg" type="image/jpeg">
-                                            <img src="https://mayaresorts.com/assets/images/offers/list-thumbnail-desktop-jpg/E0AtfQvrifeQEnEXLA2o8P4fjX7uyZLS.jpg" loading="lazy" alt="Plan Now Stay Later" title="Plan Now Stay Later" width="850">
+                                            <source srcset="<?php echo $img_desktop; ?>" type="image/webp">
+                                            <source srcset="<?php echo $img_desktop; ?>" type="image/jpeg">
+                                            <img src="<?php echo $img_desktop; ?>" loading="lazy" alt="<?php echo $title; ?>" title="<?php echo $title; ?>" width="850">
                                         </picture>
                                     </a>
-                                    <a class="title desktop" href="/ubud/offer/early-bird">Plan Now Stay Later</a>                                  
+                                    <a class="title desktop" href="<?php echo $url; ?>"><?php echo $title; ?></a>                                  
                                     <div class="desktop-container">
-                                        <p>Plan your next stay with us 30 days in advance and book up to 15% off from our best available rate</p>
+                                        <p><?php echo $desc; ?></p>
                                     </div>
-                                    <p class="desktop-cta"><a class="hlink" href="/ubud/offer/early-bird">Read more</a></p>
-                                    <a class="img-link mobile" data-toggle="collapse" href="#catalogue1" onclick="scrollToCollapsed('catalogue-item-1','catalogue1')">
+                                    <?php if ($choice = 'stay'):?>
+                                    <p class="desktop-cta"><a class="hlink" href="<?php echo $url; ?>">Read more</a></p>
+                                    <?php endif; ?>
+                                    <?php if ($choice == 'fb' || 'wellness'): ?>
+                                    <p class="desktop-cta"><a class="button" href="<?php echo $url; ?>">Contact us</a></p>
+                                    <?php endif; ?>
+                                    <a class="img-link mobile"href="#catalogue1">
                                         <picture>
-                                            <source srcset="https://mayaresorts.com/assets/images/offers/list-thumbnail-mobile-webp/hbPGOZTmuTGz2zdMsZKAmZCH_gjwwrqa.webp" type="image/webp">
-                                            <source srcset="https://mayaresorts.com/assets/images/offers/list-thumbnail-mobile-jpg/gm-2qkc94ySzZ_JBtqaN9fFPYLn2krnL.jpg" type="image/jpeg">
-                                            <img src="https://mayaresorts.com/assets/images/offers/list-thumbnail-mobile-jpg/gm-2qkc94ySzZ_JBtqaN9fFPYLn2krnL.jpg" loading="lazy" alt="Plan Now Stay Later" title="Plan Now Stay Later" width="850">
+                                        <source srcset="<?php echo $img_mobile; ?>" type="image/webp">
+                                            <source srcset="<?php echo $img_mobile; ?>" type="image/jpeg">
+                                            <img src="<?php echo $img_mobile; ?>" loading="lazy" alt="<?php echo $title; ?>" title="<?php echo $title; ?>" width="850">
                                         </picture>
                                     </a>
-                                    <a class="title mobile" href="#catalogue1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="catalogue1" onclick="scrollToCollapsed('catalogue-item-1','catalogue1')">Plan Now Stay Later</a>                                    <a class="more-details-arrow collapsed" href="#catalogue1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="catalogue1" onclick="scrollToCollapsed('catalogue-item-1','catalogue1')"><span class="left-bar"></span><span class="right-bar"></span></a>                                    <div class="mobile-description">
-                                        <div class="collapse" id="catalogue1" data-parent="#offer-index">
-                                            <p>Plan your next stay with us 30 days in advance and book up to 15% off from our best available rate</p>
-                                            <p><a class="hlink" href="/ubud/offer/early-bird">Read more</a></p>
+                                    <a class="title mobile" href="<?php echo $url; ?>"><?php echo $title; ?></a>                                    
+                                    <div class="mobile-description">
+                                        <div>
+                                            <p><?php echo $desc; ?></p>
+                                            <?php if ($choice == 'fb' || 'wellness'): ?>
+                                            <a class="button" href="<?php echo $url; ?>">Contact us</a>
+                                            <?php endif; ?>
+                                            <?php if ($choice = 'stay'):?>
+                                            <p><a class="hlink" href="<?php echo $url; ?>">Read more</a></p>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 </div>
@@ -71,6 +90,8 @@ function multi_catalogues_callback($block)
         </div>
     </div>
 </div>
+<?php endwhile; ?>
+<?php endif; ?>
 </section>
 <?php
 }?>
