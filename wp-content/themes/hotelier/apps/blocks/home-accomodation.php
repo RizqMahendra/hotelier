@@ -64,14 +64,14 @@ function home_accomodation_callback($block)
             <?php if( have_rows('accomodations') ):?>
                 <div class="swiper-container accommodation-slider-container swiper-container-initialized swiper-container-horizontal">
                     <div class="swiper-wrapper accommodation-slider-wrapper" id="swiper-wrapper-96b77abe7e4aa00f" aria-live="polite" style="transition: all 0ms ease 0s; transform: translate3d(-2280px, 0px, 0px);">
-                        <?php $i=0;while( have_rows('accomodations') ) : the_row();?>
+                        <?php $i=0;while( have_rows('accomodations') ) : the_row();??
                             <?php
                                 $title = get_sub_field('title');
                                 $content = get_sub_field('content');
                                 $url = get_sub_field('url');
                                 $image = get_sub_field('image');
                             ?>
-                            <div class="swiper-slide swiper-slide-duplicate" data-title="<?php echo $title?>" data-index="<?php echo $i;?>" data-highlights="<?php  echo $content;?>" data-swiper-slide-index="<?php  echo $i;?>" role="group" aria-label="1 / 8" style="width: 760px;">
+                            <div class="swiper-slide" data-title="<?php echo $title?>" data-index="<?php echo $i;?>" data-highlights="<?php  echo $content;?>" data-swiper-slide-index="<?php  echo $i;?>" role="group" aria-label="1 / 8" style="width: 760px;">
                                 <img class="swiper-lazy swiper-lazy-loaded" src="<?php echo $image['url'];?>">
                             </div>
                         <?php $i++;endwhile;?>
