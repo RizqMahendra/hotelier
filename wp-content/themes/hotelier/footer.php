@@ -13,7 +13,7 @@
                                     <div class="col-12 col-lg-3 p-0">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">Rooms  &amp; Villas</a>
+                                                <a class="nav-link" href="#rooms">Rooms  &amp; Villas</a>
 
                                                 <?php if( have_rows('rooms_menu', 'options') ):?>
                                                     <ul class="nav flex-column submenu">
@@ -34,7 +34,7 @@
                                     <div class="col-12 col-lg-3 p-0">
                                         <ul class="nav flex-column">
                                             <li class="nav-item">
-                                                <a class="nav-link" href="#">Restaurants &amp; Bars</a>
+                                                <a class="nav-link" href="#restaurants">Restaurants &amp; Bars</a>
                                                 <?php if( have_rows('restaurant_menu', 'options') ):?>
                                                     <ul class="nav flex-column submenu">
                                                     <?php while( have_rows('restaurant_menu', 'options') ) : the_row();?>
@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="row contacts-collection">
                                     <div class="col-12 col-lg-3 p-0 order-1 order-lg-1 social-media">
-                                        <a class="homepage-link" href="#">
+                                        <a class="homepage-link" href="<?php echo get_home_url(); ?>">
                                             <?php 
                                                 $logo = get_field('logo_2', 'options');
                                                 $instagram = get_field('instagram', 'options');

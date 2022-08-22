@@ -24,22 +24,29 @@ function highlights_callback($block)
     <section class="details-highlights bg-txt-light lazyloaded">
     <div class="container-fluid">
         <div class="row details-highlights-row">
-            <div class="col-10 offset-1 col-lg-4 offset-lg-2 p-0 details-highlights-col">
-            <?php if (have_rows('detail')):?>
-                <ul class="icons">
-                <?php while (have_rows('detail')) : the_row(); ?>
-                    <li class="size"><span><?php echo the_sub_field('size'); ?></span></li>
-                    <li class="bed"><span><?php echo the_sub_field('bed'); ?></span></li>
-                    <li class="occupancy"><span><?php echo the_sub_field('occupancy'); ?></span></li>
-                    <li class="connecting"><span><?php echo the_sub_field('connecting'); ?></span></li>
-                    <li class="balcony"><span><?php echo the_sub_field('balcony'); ?></span></li>      
-                <?php endwhile; ?>            
-                </ul>
-            <?php endif; ?>
-            </div>
-            <div class="col-10 offset-1 col-lg-4 offset-lg-0 p-0 details-description-col">
-                <p><?php echo $desc; ?></p>
-            </div>
+            <?php if(get_field('not_rooms') == true):?>
+                <div class="col-12 text-center details-description-col">
+                    <p><?php echo $desc; ?></p>
+                </div>
+            <?php else :?>
+                <div class="col-10 offset-1 col-lg-4 offset-lg-2 p-0 details-highlights-col">
+                    <?php if (have_rows('detail')):?>
+                        <ul class="icons">
+                        <?php while (have_rows('detail')) : the_row(); ?>
+                            <li class="size"><span><?php echo the_sub_field('size'); ?></span></li>
+                            <li class="bed"><span><?php echo the_sub_field('bed'); ?></span></li>
+                            <li class="occupancy"><span><?php echo the_sub_field('occupancy'); ?></span></li>
+                            <li class="connecting"><span><?php echo the_sub_field('connecting'); ?></span></li>
+                            <li class="balcony"><span><?php echo the_sub_field('balcony'); ?></span></li>      
+                        <?php endwhile; ?>            
+                        </ul>
+                    <?php endif; ?>
+                </div>
+                <div class="col-10 offset-1 col-lg-4 offset-lg-0 p-0 details-description-col">
+                    <p><?php echo $desc; ?></p>
+                </div>
+            <?php endif;?>
+            
         </div>
     </div>
 </section>

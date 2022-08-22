@@ -30,8 +30,14 @@ function page_intro_callback($block)
                 <div class="bg-container parallax-bg" style="background-image: url('<?php echo $background; ?>'); background-position: center center;"></div>
             </div>
         </div>
-        
         <div class="row page-heading-row">
+            <div class="col-8 offset-1 offset-lg-2 p-0 mb-2 page-heading-col">
+            <?php
+                if ( function_exists('yoast_breadcrumb') ) {
+                    yoast_breadcrumb( '<p id=”breadcrumbs”>','</p>' );
+                }
+            ?>
+            </div>
             <div class="col-10 offset-1 col-lg-4 offset-lg-2 p-0 page-heading-col">
                 <h2><?php echo $title; ?></h2>
                 <h1><?php echo $subtitle; ?></h1>
@@ -42,14 +48,19 @@ function page_intro_callback($block)
             <div class="col-10 offset-1 col-lg-4 offset-lg-0 page-contacts-col">
                 <div class="row">    
                 <div class="col-12 d-none col-md-6 d-md-block col-lg-8 p-0 links-col">
-                    <a class="email" href="mailto:<?php the_sub_field('email_address'); ?>"><?php echo the_sub_field('email'); ?></a>
+                    <?php if(get_sub_field('not_rooms') == true):?>
+                        <a class="email" href="<?php the_sub_field('email_address'); ?>"><?php echo the_sub_field('email'); ?></a>
+                    <?php else:?>
+                        <a class="email" href="mailto:<?php the_sub_field('email_address'); ?>"><?php echo the_sub_field('email'); ?></a>
+                    <?php endif;?>
+                    
                     <br>
                     <a class="phone" href="<?php the_sub_field('phone_url'); ?>"><?php echo the_sub_field('phone_label'); ?></a>
                     <br>
                     <a class="whatsapp" href="<?php the_sub_field('whatsapp_url'); ?>"><?php echo the_sub_field('whatsapp_label'); ?></a>
                 </div>                    
                 <div class="col-12 col-md-6 col-lg-4 buttons-col">
-                        <a class="button" href="<?php the_sub_field('check_rates_url'); ?>">Check rates</a>                        
+                        <a class="button" href="<?php the_sub_field('check_rates_url'); ?>"><?php echo (get_sub_field('not_rooms') == true) ? 'Services' : 'Check rates';?></a>                        
                         <a class="button" href="<?php the_sub_field('photos_url'); ?>">Photos</a>
                     </div>
                 </div>

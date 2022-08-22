@@ -20,7 +20,7 @@ function home_accomodation_init()
 function home_accomodation_callback($block)
 {
     $title = get_field('title'); ?>
-<section class="home-accommodation section-padding bg-txt-light lazyloaded">
+<section id="rooms" class="home-accommodation section-padding bg-txt-light lazyloaded">
     <div class="container-fluid">
         <div class="row nav-row">
             <div class="nav-bg lazyloaded">&nbsp;</div>
@@ -97,12 +97,14 @@ function home_accomodation_callback($block)
         <div class="row mobile-pagination-row">
             <div class="col-12 d-lg-none">
                 <div class="accommodation-pagination-mobile">
-                    <a class="accommodation-pagination-mobile-bullet" href="javascript:;" data-index="0">&nbsp;</a>
-                    <a class="accommodation-pagination-mobile-bullet" href="javascript:;" data-index="1">&nbsp;</a>
-                    <a class="accommodation-pagination-mobile-bullet active" href="javascript:;" data-index="2">&nbsp;</a>
-                    <a class="accommodation-pagination-mobile-bullet" href="javascript:;" data-index="3">&nbsp;</a>
-                    <a class="accommodation-pagination-mobile-bullet" href="javascript:;" data-index="4">&nbsp;</a>
-                    <a class="accommodation-pagination-mobile-bullet" href="javascript:;" data-index="5">&nbsp;</a>
+                    <?php if( have_rows('accomodations') ):?>
+                        <?php $i=0;while( have_rows('accomodations') ) : the_row();?>
+                            <?php
+                                $title = get_sub_field('title');
+                            ?>
+                            <a class="accommodation-pagination-mobile-bullet" href="javascript:;" data-index="<?php echo $i?>">&nbsp;</a>
+                        <?php $i++;endwhile;?>
+                    <?php endif;?>
                 </div>
             </div>
         </div>

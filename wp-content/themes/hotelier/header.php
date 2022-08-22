@@ -8,6 +8,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <?php wp_head(); ?>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <?php 
+            $logo = get_field('logo', 'options'); 
+          ?>
+        <link rel="shortcut icon" href="<?php echo esc_url($logo['url']); ?>" type="image/vnd.microsoft.icon" />
     </head>
 <body <?php body_class(); ?>  style="height: -webkit-fill-available;">
 <header>

@@ -16035,7 +16035,7 @@ a.pswp__share--download:hover {
 }
 
 .home-overview {
-	display: none
+	display: block;
 }
 
 @media (min-width:992px) {
@@ -16051,6 +16051,13 @@ a.pswp__share--download:hover {
 .home-overview .overview-container-col .navigation-card {
 	width: calc(25% - 14px);
 	padding: 0 0 14px
+}
+
+@media (max-width:991px) {
+	.home-overview .overview-container-col .navigation-card {
+		width: calc(100% - 14px);
+
+	}
 }
 
 @media (min-width:1400px) {
